@@ -65,29 +65,29 @@ export const constantRouterMap = [
     ]
   },
   {
-    path: '/teacher',
+    path: '/major',
     component: Layout,
-    redirect: '/teacher/table',
-    name: '讲师管理',
-    meta: { title: '讲师管理', icon: 'example' },
+    redirect: '/major/table',
+    name: '专业管理',
+    meta: { title: '专业管理', icon: 'example' },
     children: [
       {
         path: 'table',
-        name: '讲师列表',
-        component: () => import('@/views/edu/teacher/list'),
-        meta: { title: '讲师列表', icon: 'table' }
+        name: '专业列表',
+        component: () => import('@/views/major/list'),
+        meta: { title: '专业列表', icon: 'table' }
       },
       {
         path: 'save',
-        name: '添加讲师',
-        component: () => import('@/views/edu/teacher/save'),
-        meta: { title: '添加讲师', icon: 'tree' }
+        name: '添加专业',
+        component: () => import('@/views/major/save'),
+        meta: { title: '添加专业', icon: 'tree' }
       },
       {
         path: 'edit/:id', 
-        name: '修改讲师',
-        component: () => import('@/views/edu/teacher/save'),
-        meta: { title: '编辑讲师', noCache: true },
+        name: '修改专业',
+        component: () => import('@/views/major/save'),
+        meta: { title: '编辑专业', noCache: true },
         hidden: true
       }
     ]
